@@ -3,14 +3,11 @@ import React from "react";
 import { AsciiVideo } from "./asciiVideo";
 import { StrictMode } from "react";
 
-import myData from "./assets/shortascii.json";
-
 import "./homepage.less";
 import Canvas from "./Canvas";
+import { ContentSwitcher } from "./ContentSwitcher";
 
 export const Homepage = () => {
-  const data: string[] = myData;
-
   return (
     <>
       <div className="background-rect">
@@ -28,17 +25,7 @@ export const Homepage = () => {
             </span>
           </div>
 
-          <div className="content-switcher">
-            <div className="projects">
-              <ul>
-                <li>user interfaces</li>
-                <li>tools for designers</li>
-                <li>video processing</li>
-                <li>interactive sculpture</li>
-              </ul>
-            </div>
-            {data != null ? <AsciiVideo asciiFrames={data} /> : null}
-          </div>
+          <ContentSwitcher />
         </div>
         {/* <Canvas /> */}
       </div>
