@@ -3,6 +3,15 @@ import "./content-switcher.less";
 import asciiFrames from "./assets/shortascii.json";
 import { AsciiVideo } from "./asciiVideo";
 import _ from "lodash";
+import fs from "fs";
+import path from "path";
+import { BlogPost } from "./portfolio-entries/BlogPost";
+import ToolsForDesigners from "./portfolio-entries/tools-for-designers.json";
+import InteractiveSculpture from "./portfolio-entries/interactive-sculpture.json";
+import VideoProcessing from "./portfolio-entries/video-processing.json";
+import UserInterfaces from "./portfolio-entries/user-interfaces.json";
+
+// import "portfolio-entries/user-interfaces.mdx" as userInterfaces;
 
 // union type of project names
 type ProjectName =
@@ -11,16 +20,14 @@ type ProjectName =
   | "video processing"
   | "interactive sculpture";
 
-// dict of project names to project descriptions
-const ProjectDescriptions: Record<ProjectName, string> = {
-  "user interfaces":
-    "I like to build user interfaces that are simple, intuitive, and beautiful. I'm particularly interested in the intersection of code and design.",
-  "tools for designers":
-    "I like to build tools for designers that are simple, intuitive, and beautiful. I'm particularly interested in the intersection of code and design.",
-  "video processing":
-    "I like to build video processing tools that are simple, intuitive, and beautiful. I'm particularly interested in the intersection of code and design.",
-  "interactive sculpture":
-    "I like to build interactive sculptures that are simple, intuitive, and beautiful. I'm particularly interested in the intersection of code and design.",
+const meta: any = {
+  "user interfaces": UserInterfaces,
+
+  "tools for designers": ToolsForDesigners,
+
+  "video processing": VideoProcessing,
+
+  "interactive sculpture": InteractiveSculpture,
 };
 
 export const ContentSwitcher = () => {
@@ -36,32 +43,37 @@ export const ContentSwitcher = () => {
     <div className="content-switcher">
       <div className="projects">
         <ul>
-          {Object.keys(ProjectDescriptions).map((projectName) => (
-            // react component with onmouseenter
-            <li
-              key={projectName}
-              onMouseEnter={() =>
-                debouncedSetHoveredProject(projectName as ProjectName)
-              }
-              onMouseLeave={
-                //debounce
-                () => debouncedSetHoveredProject(null)
-              }
-            >
-              {projectName}
-            </li>
-          ))}
+          {
+            // map over the members of the union type
+            Object.keys(meta).map((projectName) => (
+              // react component with onmouseenter
+              <li
+                key={projectName}
+                onMouseEnter={() =>
+                  debouncedSetHoveredProject(projectName as ProjectName)
+                }
+                onMouseLeave={
+                  //debounce
+                  () => debouncedSetHoveredProject(null)
+                }
+              >
+                {projectName}
+              </li>
+            ))
+          }
         </ul>
       </div>
       <div className="content">
         <div className="content-text">
           {hoveredProject != null ? (
-            <div className="project-description">
-              {ProjectDescriptions[hoveredProject as ProjectName]}
+            // index into the dict of project descriptions,
+            // which are markdown files
+            <div className="">
+              <BlogPost meta={meta[hoveredProject]} />
             </div>
-          ) : asciiFrames != null ? (
+          ) : (
             <AsciiVideo asciiFrames={asciiFrames} />
-          ) : null}
+          )}
         </div>
       </div>
     </div>
