@@ -1,16 +1,17 @@
 {
   "title": "Sculpture",
-  "technologies": ["arduino, found objects"],
+  "technologies": ["arduino programming language"],
   "description": "responds to user input. proximity to sculpture corresponds to speed of movement. ",
   "images": [
-    { "url": "NaPnQxEKfDQ", "isYoutube": true },
     {
       "url": "WjkXq7ehdXI",
       "isYoutube": true
     },
+
     {
-      "url": "A7J59RdtNTw",
-      "isYoutube": true
+      "url": "14KaRNbutEo",
+      "isYoutube": true,
+      "isHorizontal": true
     }
   ]
 }

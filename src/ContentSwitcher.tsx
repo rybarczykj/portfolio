@@ -54,7 +54,8 @@ export const ContentSwitcher = () => {
                 }
                 onMouseLeave={
                   //debounce
-                  () => debouncedSetHoveredProject(null)
+                  // () => debouncedSetHoveredProject(null)
+                  () => console.log("wow")
                 }
               >
                 {projectName}
