@@ -5,9 +5,9 @@ import { AsciiVideo } from "./asciiVideo";
 import _ from "lodash";
 import fs from "fs";
 import path from "path";
-import { BlogPost } from "./portfolio-entries/BlogPost";
-import ToolsForDesigners from "./portfolio-entries/tools-for-designers.json";
-import InteractiveSculpture from "./portfolio-entries/interactive-sculpture.json";
+// import { BlogPost } from "./portfolio-entries/BlogPost";
+import ToolsForDesigners from "./portfolio-entries/ToolsForDesigners";
+import InteractiveSculpture from "./portfolio-entries/InteractiveSculpture";
 import VideoProcessing from "./portfolio-entries/video-processing.json";
 import UserInterfaces from "./portfolio-entries/user-interfaces.json";
 
@@ -21,12 +21,13 @@ type ProjectName =
   | "interactive sculpture";
 
 const meta: any = {
-  "user interfaces": UserInterfaces,
+  "user interfaces": null,
 
   "tools for designers": ToolsForDesigners,
 
-  "video processing": VideoProcessing,
+  "video processing": null,
 
+  // index into the actual react component
   "interactive sculpture": InteractiveSculpture,
 };
 
@@ -52,11 +53,10 @@ export const ContentSwitcher = () => {
                 onMouseEnter={() =>
                   debouncedSetHoveredProject(projectName as ProjectName)
                 }
-                onMouseLeave={
-                  //debounce
-                  // () => debouncedSetHoveredProject(null)
-                  () => console.log("wow")
-                }
+                // onMouseLeave={
+                //   debounce
+                //   () => debouncedSetHoveredProject(null)
+                // }
               >
                 {projectName}
               </li>
@@ -66,12 +66,11 @@ export const ContentSwitcher = () => {
       </div>
       <div className="content">
         <div className="content-text">
-          {hoveredProject != null ? (
+          {hoveredProject != null && meta[hoveredProject] != null ? (
             // index into the dict of project descriptions,
             // which are markdown files
-            <div className="">
-              <BlogPost meta={meta[hoveredProject]} />
-            </div>
+            // render the react component fromt the dict
+            React.createElement(meta[hoveredProject])
           ) : (
             <AsciiVideo asciiFrames={asciiFrames} />
           )}
