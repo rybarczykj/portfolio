@@ -35,17 +35,31 @@
   column-gap: 200px;
 }
 
-.blog-post {
+.content {
+  // make it appear 200px higher than it should be
+  // so that it can slide down
+  // background-color: red;
+  font-size: 14px;
+  max-width: 800px;
+  color: @text-color;
+  // large floating div which scrolls above everything else
+  // in the background.
+}
+
+.content-text {
   max-width: 520px;
+}
+
+.blog-container {
+  // background-color: white;
+  max-height: 100vh;
+  // overflow: auto;
+}
+.blog-post {
+  max-width: 720px;
   color: @text-color;
   font-size: 16px;
   // background-color: red;
-}
-
-.content {
-  font-size: 14px;
-  max-width: 600px;
-  color: @text-color;
 }
 
 .technologies {

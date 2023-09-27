@@ -5,29 +5,30 @@ import { BlogContent } from "./BlogContent";
 export const ToolsForDesigners = () => {
   const description: React.ReactNode = (
     <>
+      generate ascii art and edit it on the fly. video mode in beta.
       <div>
+        {" "}
         <a href="https://rybarczykj.github.io/ascii/">
-          https://rybarczykj.github.io/ascii/
+          rybarczykj.github.io/ascii/
         </a>{" "}
       </div>
-      A React app to generate ascii art from an image with instant feedback on
-      various parameters. Used for personal projects. Support for video was
-      added later.
     </>
   );
 
   const images: React.ReactNode[] = [
-    // <img src="." key={0} />,
-    // <img src="." key={1} />,
+    <img height={420} src={require(`./blog-assets/fake_ad_2.gif`)} key={1} />,
+    <img height={420} src={require(`./blog-assets/fake_ad_2.png`)} key={2} />,
   ];
 
   return (
-    <BlogContent
-      title="Ascii Art Tool"
-      technologies="React"
-      description={description}
-      images={images}
-    />
+    <div>
+      <BlogContent
+        title="Ascii Art Generator"
+        technologies="React, Typescript"
+        description={description}
+        images={images}
+      />
+    </div>
   );
 };
 

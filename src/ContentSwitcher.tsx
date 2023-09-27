@@ -8,6 +8,7 @@ import path from "path";
 // import { BlogPost } from "./portfolio-entries/BlogPost";
 import ToolsForDesigners from "./portfolio-entries/ToolsForDesigners";
 import InteractiveSculpture from "./portfolio-entries/InteractiveSculpture";
+import SelectedDesign from "./portfolio-entries/SelectedDesign";
 import VideoProcessing from "./portfolio-entries/video-processing.json";
 import UserInterfaces from "./portfolio-entries/user-interfaces.json";
 
@@ -15,20 +16,23 @@ import UserInterfaces from "./portfolio-entries/user-interfaces.json";
 
 // union type of project names
 type ProjectName =
-  | "user interfaces"
+  // | "user interfaces"
   | "tools for designers"
-  | "video processing"
-  | "interactive sculpture";
+  // | "video processing"
+  | "interactive sculpture"
+  | "selected design";
 
 const meta: any = {
-  "user interfaces": null,
+  // "user interfaces": null,
 
   "tools for designers": ToolsForDesigners,
 
-  "video processing": null,
+  // "video processing": null,
 
   // index into the actual react component
   "interactive sculpture": InteractiveSculpture,
+
+  "selected design": SelectedDesign,
 };
 
 export const ContentSwitcher = () => {
@@ -65,16 +69,17 @@ export const ContentSwitcher = () => {
         </ul>
       </div>
       <div className="content">
-        <div className="content-text">
-          {hoveredProject != null && meta[hoveredProject] != null ? (
-            // index into the dict of project descriptions,
-            // which are markdown files
-            // render the react component fromt the dict
-            React.createElement(meta[hoveredProject])
-          ) : (
-            <AsciiVideo asciiFrames={asciiFrames} />
-          )}
-        </div>
+        {hoveredProject != null && meta[hoveredProject] != null ? (
+          // index into the dict of project descriptions,
+          // which are markdown files
+          // render the react component fromt the dict
+          <div className="blog-container">
+            {" "}
+            {React.createElement(meta[hoveredProject])}{" "}
+          </div>
+        ) : (
+          <AsciiVideo asciiFrames={asciiFrames} />
+        )}
       </div>
     </div>
   );

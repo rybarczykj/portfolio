@@ -12,16 +12,17 @@ export const Homepage = () => {
     <>
       <div className="background-rect">
         {" "}
-        <div className="background-arrows"> </div>
+        <div className="background-arrows"></div>
       </div>
 
       <div className="portfolio">
         <div className="flex">
           <div className="introduction">
             <span className="text">
-              JACK RYBARCZYK is a mf uhhh frontend software engineer interested
-              in the intersection of code and design. based in NYC, currently @
-              datadog and who <span className="highlighted">place holder</span>.
+              JACK RYBARCZYK is uhhhh frontend software engineer/graphic
+              designer <span className="highlighted">based </span>in NYC who
+              currently works @datadog. a yep and this is{" "}
+              <span className="highlighted">his website</span>
             </span>
           </div>
 

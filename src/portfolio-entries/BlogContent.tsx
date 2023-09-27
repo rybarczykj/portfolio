@@ -7,26 +7,32 @@ export const BlogContent = ({
   technologies,
   description,
   images,
+  imageURLs,
 }: {
   title: string;
   technologies: string;
   description: React.ReactNode;
-  images: React.ReactNode[];
+  images?: React.ReactNode[];
+  imageURLs?: string[];
 }) => {
   return (
     <div className="blog-post">
-      <div className={"title"}>
-        {title} <span className={"technologies"}>{technologies}</span>
+      <div className="content-text">
+        <div className={"title"}>
+          {title} <span className={"technologies"}>{technologies}</span>
+        </div>
+
+        <div className={"description"}>{description}</div>
       </div>
-
-      <div className={"description"}>{description}</div>
-
       <div className="blog-images">
-        {images.map((image, i) => (
-          <div className="blog-image" key={i}>
-            {image}
-          </div>
-        ))}
+        {images &&
+          images.map((image, i) => (
+            <div className="blog-image" key={i}>
+              {image}
+            </div>
+          ))}
+        {imageURLs &&
+          imageURLs.map((url, i) => <img src={`require(${url})`} key={i} />)}
       </div>
     </div>
   );

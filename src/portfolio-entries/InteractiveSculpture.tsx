@@ -8,28 +8,41 @@ export const InteractiveSculpture = () => {
 
   const description = (
     <>
-      responds to user input. proximity to sculpture corresponds to speed of
-      movement.
+      {/* responds to user input. proximity to sculpture corresponds to speed of
+      movement. */}
     </>
   );
 
-  const images = [
-    <iframe
-      key={0}
-      width={videoWidth}
-      height={videHeight}
-      src={`https://www.youtube.com/embed/WjkXq7ehdXI?&controls=0&showinfo=0&modestbranding=1&mute=1&playlist=WjkXq7ehdXI&loop=1`}
-      title="arduino sculpture 1"
-      allow="controls; showinfo; modestbranding; autoplay; loop; playlist"
-    />,
+  // const images = [
+  //   <iframe
+  //     key={0}
+  //     width={videoWidth}
+  //     height={videHeight}
+  //     src={`https://www.youtube.com/embed/WjkXq7ehdXI?&controls=0&showinfo=0&modestbranding=1&mute=1&playlist=WjkXq7ehdXI&loop=1`}
+  //     title="arduino sculpture 1"
+  //     allow="controls; showinfo; modestbranding; autoplay; loop; playlist"
+  //   />,
 
-    <iframe
+  //   <iframe
+  //     key={1}
+  //     width={videHeight}
+  //     height={videoWidth}
+  //     src={`https://www.youtube.com/embed/14KaRNbutEo?&controls=0&showinfo=0&modestbranding=1&mute=1&playlist=14KaRNbutEo&loop=1`}
+  //     title="arduino sculpture 1"
+  //     allow="controls; showinfo; modestbranding; autoplay; loop; playlist"
+  //   />,
+  // ];
+
+  const images: React.ReactNode[] = [
+    // <img
+    //   key={2}
+    //   height={400}
+    //   src={require(`./blog-assets/arduino-sculpture-2.gif`)}
+    // />,
+    <img
+      height={400}
+      src={require(`./blog-assets/arduino-sculpture-3.gif`)}
       key={1}
-      width={videHeight}
-      height={videoWidth}
-      src={`https://www.youtube.com/embed/14KaRNbutEo?&controls=0&showinfo=0&modestbranding=1&mute=1&playlist=14KaRNbutEo&loop=1`}
-      title="arduino sculpture 1"
-      allow="controls; showinfo; modestbranding; autoplay; loop; playlist"
     />,
   ];
 
