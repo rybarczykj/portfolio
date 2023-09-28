@@ -5,7 +5,7 @@ import { BlogContent } from "./BlogContent";
 export const SelectedDesign = () => {
   const description: React.ReactNode = (
     <>
-      <div></div>
+      <div>just some posters</div>
     </>
   );
 

@@ -11,6 +11,7 @@ import InteractiveSculpture from "./portfolio-entries/InteractiveSculpture";
 import SelectedDesign from "./portfolio-entries/SelectedDesign";
 import VideoProcessing from "./portfolio-entries/video-processing.json";
 import UserInterfaces from "./portfolio-entries/user-interfaces.json";
+import ComputationalTees from "./portfolio-entries/ComputationalTees";
 
 // import "portfolio-entries/user-interfaces.mdx" as userInterfaces;
 
@@ -26,6 +27,8 @@ const meta: any = {
   // "user interfaces": null,
 
   "tools for designers": ToolsForDesigners,
+
+  "computational tees": ComputationalTees,
 
   // "video processing": null,
 
@@ -57,10 +60,9 @@ export const ContentSwitcher = () => {
                 onMouseEnter={() =>
                   debouncedSetHoveredProject(projectName as ProjectName)
                 }
-                // onMouseLeave={
-                //   debounce
-                //   () => debouncedSetHoveredProject(null)
-                // }
+              // onMouseLeave={
+              //   () => debouncedSetHoveredProject(null)
+              // }
               >
                 {projectName}
               </li>
@@ -81,6 +83,6 @@ export const ContentSwitcher = () => {
           <AsciiVideo asciiFrames={asciiFrames} />
         )}
       </div>
-    </div>
+    </div >
   );
 };

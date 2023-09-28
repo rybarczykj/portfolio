@@ -5,9 +5,11 @@ import { BlogContent } from "./BlogContent";
 export const ToolsForDesigners = () => {
   const description: React.ReactNode = (
     <>
-      generate ascii art and edit it on the fly. video mode in beta.
+      A tool to generate ascii art and edit it on the fly. video mode in beta.
       <div>
         {" "}
+        <br />
+        <br />
         <a href="https://rybarczykj.github.io/ascii/">
           rybarczykj.github.io/ascii/
         </a>{" "}

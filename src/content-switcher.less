@@ -6,6 +6,7 @@
   font-size: @font-size-medium;
   color: rgb(0, 0, 255);
   padding-left: 0px;
+  width: 300px;
 
   & ul {
     display: inline-block;
@@ -35,6 +36,7 @@
   column-gap: 200px;
 }
 
+
 .content {
   // make it appear 200px higher than it should be
   // so that it can slide down
@@ -47,7 +49,7 @@
 }
 
 .content-text {
-  max-width: 520px;
+  max-width: 500px;
 }
 
 .blog-container {
@@ -56,14 +58,23 @@
   // overflow: auto;
 }
 .blog-post {
-  max-width: 720px;
+  // width: 720px;
   color: @text-color;
   font-size: 16px;
-  // background-color: red;
+
+}
+
+.title {
+// all caps
+  margin-bottom: 10px;
+  //italic
+
+
 }
 
 .technologies {
   font-weight: 700;
+
 }
 
 .blog-images {
@@ -72,6 +83,22 @@
   flex-wrap: wrap;
   gap: 5px;
   margin-top: 20px;
+
+  // crop everything into a square of size 200px
+  // in the middle of the image
+  & .blog-image {
+    // width: 200px;
+    // height: 200px;
+    // overflow: hidden;
+  }
+
+  & img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+
 }
 
 .ascii {
