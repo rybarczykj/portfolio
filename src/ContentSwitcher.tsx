@@ -9,17 +9,16 @@ import path from "path";
 import ToolsForDesigners from "./portfolio-entries/ToolsForDesigners";
 import InteractiveSculpture from "./portfolio-entries/InteractiveSculpture";
 import SelectedDesign from "./portfolio-entries/SelectedDesign";
-import VideoProcessing from "./portfolio-entries/video-processing.json";
-import UserInterfaces from "./portfolio-entries/user-interfaces.json";
 import ComputationalTees from "./portfolio-entries/ComputationalTees";
+import Dogs from "./portfolio-entries/Dogs";
 
 // import "portfolio-entries/user-interfaces.mdx" as userInterfaces;
 
 // union type of project names
 type ProjectName =
-  // | "user interfaces"
   | "tools for designers"
-  // | "video processing"
+  | "computational tees"
+  | "dogs"
   | "interactive sculpture"
   | "selected design";
 
@@ -36,6 +35,7 @@ const meta: any = {
   "interactive sculpture": InteractiveSculpture,
 
   "selected design": SelectedDesign,
+  dogs: Dogs,
 };
 
 export const ContentSwitcher = () => {
@@ -60,9 +60,18 @@ export const ContentSwitcher = () => {
                 onMouseEnter={() =>
                   debouncedSetHoveredProject(projectName as ProjectName)
                 }
-              // onMouseLeave={
-              //   () => debouncedSetHoveredProject(null)
-              // }
+                // onMouseLeave={() => debouncedSetHoveredProject(null)}
+                className={`clickable ${
+                  projectName === hoveredProject ? "selected" : ""
+                }`}
+                role="button"
+                tabIndex={0}
+                onClick={() => setHoveredProject(projectName as ProjectName)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    setHoveredProject(projectName as ProjectName);
+                  }
+                }}
               >
                 {projectName}
               </li>
@@ -83,6 +92,6 @@ export const ContentSwitcher = () => {
           <AsciiVideo asciiFrames={asciiFrames} />
         )}
       </div>
-    </div >
+    </div>
   );
 };

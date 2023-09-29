@@ -8,18 +8,30 @@ export const BlogContent = ({
   description,
   images,
   imageURLs,
+  link,
 }: {
   title: string;
   technologies: string;
   description: React.ReactNode;
   images?: React.ReactNode[];
   imageURLs?: string[];
+  link?: string;
 }) => {
   return (
     <div className="blog-post">
       <div className="content-text">
         <div className={"title"}>
-          {title} <span className={"technologies"}>{technologies}</span>
+          {title} {""} <span className={"technologies"}>{technologies}</span>
+          {link && (
+            <div className={"link"}>
+              <a href={link}>
+                {
+                  //only show the first 30 characters of the link
+                  link.slice(0, 45) + (link.length > 45 ? "..." : "")
+                }
+              </a>
+            </div>
+          )}
         </div>
 
         <div className={"description"}>{description}</div>

@@ -16,12 +16,6 @@ export const SelectedDesign = () => {
       key={2}
     />,
     <img height={350} src={require(`./blog-assets/redd-poster.png`)} key={1} />,
-
-    // <img
-    //   height={250}
-    //   src={require(`./blog-assets/gromit-poster.png`)}
-    //   key={2}
-    // />,
   ];
 
   return (

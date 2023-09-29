@@ -8,13 +8,20 @@ export const InteractiveSculpture = () => {
 
   const description = (
     <>
-      Using bodies as controllers, I created a series of sculptures that respond to proximity
-      of their observers.
+      Using bodies as controllers, I created a series of sculptures that respond
+      to proximity of their observers.
     </>
   );
 
+  const link =
+    "https://www.youtube.com/watch?v=6a1oaH573dY&list=PLZeTy8TIwguGbXbmBebhnmyQDMBwzvWZL&index=1";
 
   const images: React.ReactNode[] = [
+    <img
+      height={400}
+      src={require(`./blog-assets/arduino-sculpture-5.gif`)}
+      key={1}
+    />,
     <img
       height={400}
       src={require(`./blog-assets/arduino-sculpture-3.gif`)}
@@ -28,6 +35,7 @@ export const InteractiveSculpture = () => {
       technologies="Arduino, C++"
       description={description}
       images={images}
+      link={link}
     />
   );
 };
