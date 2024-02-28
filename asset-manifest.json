@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d9f5c1a.css",
+    "main.css": "/static/css/main.564d6013.css",
     "main.js": "/static/js/main.aa40da5d.js",
     "static/media/fake_ad_1.png": "/static/media/fake_ad_1.43e488b40e8a5fbfa61a.png",
     "static/media/redd-poster.png": "/static/media/redd-poster.f516cad58609a742e387.png",
@@ -17,11 +17,11 @@
     "index.html": "/index.html",
     "static/media/wide-arrow.svg": "/static/media/wide-arrow.005707b76ee77fffb4c6.svg",
     "static/media/arrow.svg": "/static/media/arrow.011bdfc9016849deeb77.svg",
-    "main.7d9f5c1a.css.map": "/static/css/main.7d9f5c1a.css.map",
+    "main.564d6013.css.map": "/static/css/main.564d6013.css.map",
     "main.aa40da5d.js.map": "/static/js/main.aa40da5d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d9f5c1a.css",
+    "static/css/main.564d6013.css",
     "static/js/main.aa40da5d.js"
   ]
 }
