@@ -1,27 +1,36 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a4a374c8.css",
-    "main.js": "/portfolio/static/js/main.f4baa675.js",
+    "main.css": "/portfolio/static/css/main.eab8c341.css",
+    "main.js": "/portfolio/static/js/main.ead70b71.js",
     "static/media/fake_ad_1.png": "/portfolio/static/media/fake_ad_1.43e488b40e8a5fbfa61a.png",
+    "static/media/ascii-site-gif2.gif": "/portfolio/static/media/ascii-site-gif2.94a943fea339342157d6.gif",
+    "static/media/arduino-sculpture-4.gif": "/portfolio/static/media/arduino-sculpture-4.1d835e643e82ec37759d.gif",
     "static/media/redd-poster.png": "/portfolio/static/media/redd-poster.f516cad58609a742e387.png",
     "static/media/tees.png": "/portfolio/static/media/tees.4c7e5b0f4969a3ffebdf.png",
     "static/media/book.jpg": "/portfolio/static/media/book.525d04ad17eaadee4a1a.jpg",
     "static/media/white-poster.png": "/portfolio/static/media/white-poster.2f95251016c2166135ce.png",
+    "static/media/arduino-sculpture-1.gif": "/portfolio/static/media/arduino-sculpture-1.18d78eadeeeef46fae2c.gif",
+    "static/media/red-poster.jpg": "/portfolio/static/media/red-poster.a483698ff2bd4d216433.jpg",
     "static/media/dogs-02.png": "/portfolio/static/media/dogs-02.a1580068b43d6552501d.png",
     "static/media/dogs-01.png": "/portfolio/static/media/dogs-01.890409f195715a4da442.png",
     "static/media/dogs-03.png": "/portfolio/static/media/dogs-03.1934140ecc0134fbb2df.png",
+    "static/media/arduino-sculpture-2.gif": "/portfolio/static/media/arduino-sculpture-2.b4c47833ffc7e58b37a5.gif",
     "static/media/arduino-sculpture-3.gif": "/portfolio/static/media/arduino-sculpture-3.2fb6c75f09fcaf610bc7.gif",
     "static/media/arduino-sculpture-5.gif": "/portfolio/static/media/arduino-sculpture-5.2a9518f04415f3b492f8.gif",
+    "static/media/arduino-sculpture-1 copy.gif": "/portfolio/static/media/arduino-sculpture-1 copy.99ac81c3a6ae2660b7cc.gif",
+    "static/media/fake_ad_2.png": "/portfolio/static/media/fake_ad_2.4a5c7da838f042b4b527.png",
+    "static/media/gromit-poster.png": "/portfolio/static/media/gromit-poster.77aeb6a02a94ad3f0e85.png",
+    "static/media/ascii-site-gif.gif": "/portfolio/static/media/ascii-site-gif.64b63e8c678929a3a30a.gif",
     "static/media/fake_ad_2.gif": "/portfolio/static/media/fake_ad_2.da52a4c14ec2f5a58e3b.gif",
     "static/media/pixels.svg": "/portfolio/static/media/pixels.7fe99b29c9f9ab3d866e.svg",
     "index.html": "/portfolio/index.html",
     "static/media/wide-arrow.svg": "/portfolio/static/media/wide-arrow.005707b76ee77fffb4c6.svg",
     "static/media/arrow.svg": "/portfolio/static/media/arrow.011bdfc9016849deeb77.svg",
-    "main.a4a374c8.css.map": "/portfolio/static/css/main.a4a374c8.css.map",
-    "main.f4baa675.js.map": "/portfolio/static/js/main.f4baa675.js.map"
+    "main.eab8c341.css.map": "/portfolio/static/css/main.eab8c341.css.map",
+    "main.ead70b71.js.map": "/portfolio/static/js/main.ead70b71.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4a374c8.css",
-    "static/js/main.f4baa675.js"
+    "static/css/main.eab8c341.css",
+    "static/js/main.ead70b71.js"
   ]
 }
